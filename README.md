@@ -5,3 +5,4 @@ This is my [personal website](https://williamglazer.github.io/website/) inspired
 ## Sources
 
 - [background gradient](https://codepen.io/P1N2O/pen/pyBNzX)
+- [icons](https://www.flaticon.com/free-icons/copy)
