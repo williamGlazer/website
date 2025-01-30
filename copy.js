@@ -1,18 +1,21 @@
-let isCopy = false
+let timeoutId;
 
 function copy() {
-    navigator.clipboard.writeText('willcavanagh@hotmail.com'); 
-    updateText()
-    setTimeout(updateText, 2000);
+    navigator.clipboard.writeText('willcavanagh@hotmail.com')
+        .then(() => {
+            updateText();
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(resetText, 700);
+        })
+        .catch(err => console.error('Failed to copy text: ', err));
 }
 
 function updateText() {
-    let button = document.getElementById('mail')
-    let content = button.innerHTML
-    if (isCopy) {
-        button.innerHTML = content.replace('Copied!', 'Mail')
-    } else {
-        button.innerHTML = content.replace('Mail', 'Copied!')
-    }
-    isCopy = !isCopy
+    const span = document.getElementById('mail');
+    span.innerHTML = 'Copied!';
+}
+
+function resetText() {
+    const span = document.getElementById('mail');
+    span.innerHTML = 'Mail';
 }

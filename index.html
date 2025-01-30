@@ -1,74 +1,60 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Glazer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="artifacts/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="artifacts/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="artifacts/favicon/favicon-16x16.png">
-    <script src="copy.js"></script>
+    <script src="copy.js" defer></script>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,0" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,0">
 </head>
 
 <body>
     <div class="card">
-        <img class="headshot" src="artifacts/headshot.png" alt="picture">
-        <div class="container" style="width:100%">
+        <img class="headshot" src="artifacts/headshot.png" alt="William's headshot">
+        <div class="container">
             <h1>Hi! I'm William</h1>
             <p>I graduated in software engineering from Polytechnique Montreal and I am pursuing a master's degree at
                 MILA.</p>
-            <p>My skillset includes data science, software engineering, research, data visualization and much much more!
-            </p>
+            <p>My skillset includes data science, software engineering, research, data visualization and much more!</p>
             <p>Feel free to reach out!</p>
             <br>
-            <div style="bottom: 0px">
-                <button id='mail' onclick='copy()' type="button">
-                    <span class="text">Mail</span>
-                    <span class="material-symbols-outlined icon">
-                        mail
-                    </span>
+            <div class="button-container">
+                <button onclick="copy()" type="button">
+                    <span id="mail" class="text">Mail</span>
+                    <span class="material-symbols-outlined icon">mail</span>
                 </button>
-
                 <button onclick="location.href='https://github.com/williamGlazer'" type="button">
                     <span class="text">GitHub</span>
-                    <span class="icon material-symbols-outlined">
-                        terminal
-                    </span>
+                    <span class="material-symbols-outlined icon">terminal</span>
                 </button>
-
                 <button onclick="location.href='https://www.linkedin.com/in/williamglazercavanagh/'" type="button">
                     <span class="text">LinkedIn</span>
-                    <span class="material-symbols-outlined icon">
-                        groups
-                    </span>
+                    <span class="material-symbols-outlined icon">groups</span>
                 </button>
-
                 <button onclick="location.href='artifacts/Resume.pdf'" type="button">
                     <span class="text">Resume</span>
-                    <span class="material-symbols-outlined icon">
-                        description
-                    </span>
+                    <span class="material-symbols-outlined icon">description</span>
                 </button>
-
                 <button onclick="location.href='https://scholar.google.ca/citations?hl=en&user=PbykyI4AAAAJ'"
                     type="button">
-                    <span class="text">
-                        Google Scholar</span>
-                    <span class="material-symbols-outlined icon">
-                        school
-                    </span>
+                    <span class="text">Google Scholar</span>
+                    <span class="material-symbols-outlined icon">school</span>
                 </button>
-
                 <button
                     onclick="location.href='https://ivado.ca/en/2022/01/10/ivado-student-portraits-william-glazer-cavanagh/'"
                     type="button">
-                    <span class="text">
-                        IVADO Profile</span>
-                    <span class="material-symbols-outlined icon">
-                        account_circle
-                    </span>
+                    <span class="text">IVADO Profile</span>
+                    <span class="material-symbols-outlined icon">account_circle</span>
                 </button>
             </div>
         </div>
     </div>
 </body>
+
+</html>
