@@ -1,21 +1,28 @@
 let timeoutId;
 
+/**
+ * Copy email address to the clipboard.
+ */
 function copy() {
-    navigator.clipboard.writeText('willcavanagh@hotmail.com')
-        .then(() => {
-            updateText();
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(resetText, 700);
-        })
-        .catch(err => console.error('Failed to copy text: ', err));
+  navigator.clipboard.writeText('willcavanagh@hotmail.com')
+    .then(() => {
+      updateButton();
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(resetButton, 700);
+    })
+    .catch(err => console.error('Failed to copy text:', err));
 }
 
-function updateText() {
-    const span = document.getElementById('mail');
-    span.innerHTML = 'Copied!';
+/**
+ * Change the button label to “Copied!”.
+ */
+function updateButton() {
+  document.getElementById('mail').textContent = 'Copied!';
 }
 
-function resetText() {
-    const span = document.getElementById('mail');
-    span.innerHTML = 'Mail';
+/**
+ * Restore the original button label.
+ */
+function resetButton() {
+  document.getElementById('mail').textContent = 'Mail';
 }
